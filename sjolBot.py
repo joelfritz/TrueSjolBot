@@ -149,7 +149,8 @@ async def commands(ctx):
 #This command will send out a random quote from the man the myth the legendary Sjol himself.
 @bot.command(pass_context=True)
 async def quote(ctx):
-    await bot.say(quoteList[random.randrange(len(quoteList))])
+    #await bot.say(quoteList[random.randrange(len(quoteList))])
+    await bot.say("I am working")
 
 #This command will tell the user what the homework is. Will be updated daily.
 @bot.command(pass_context=True)
