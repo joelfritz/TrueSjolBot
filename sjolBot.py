@@ -154,7 +154,11 @@ async def quote(ctx):
 #This command will tell the user what the homework is. Will be updated daily.
 @bot.command(pass_context=True)
 async def homework(ctx):
-    await bot.say("Advice for next year")
+    embed = discord.Embed(title="Summer Homework", description="Due: First Day of School")
+    embed.add_field(name="Summer Letter", value="https://www.chino.k12.ca.us/cms/lib/CA01902308/Centricity/Domain/2558/AB%20Summer%20Letter.pdf")
+    embed.add_field(name="Summer Assignment 2018", value="https://www.chino.k12.ca.us/cms/lib/CA01902308/Centricity/Domain/2558/Summer%20Assignment%202018.pdf")
+    embed.add_field(name="Calculator Assignment", value="https://www.chino.k12.ca.us/cms/lib/CA01902308/Centricity/Domain/2558/Summer%20Assignment%20AB%20Calculator.pdf")
+    await bot.say(embed=embed)
 
 #This command will take user input as a quote to be added later.
 @bot.command(pass_context=True)
