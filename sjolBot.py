@@ -16,6 +16,7 @@ bot = commands.Bot(command_prefix='!')
 client = discord.Client()
 
 
+
 #A list of the quotes.
 quoteList = [
     "You're an insane person.",
@@ -130,11 +131,10 @@ async def on_ready():
     print ("I am " + bot.user.name)
     bot.remove_command('help')
 
-
 @bot.command(pass_context=True)
 async def commands(ctx):
     embed = discord.Embed(title="Sjol Bot", description="The Ultimate Teacher Bot. List of commands are:", color=0xeee657)
-    embed.add_field(name="!help", value="Gives additional information about the commands. Seems like you already found this command.", inline=False)
+    embed.add_field(name="!commands", value="Gives additional information about the commands. Seems like you already found this command.", inline=False)
     embed.add_field(name="!quote", value="This command will send out a random quote from the man the myth the legendary Sjol himself.", inline=False)
     embed.add_field(name="!homework", value="This command will tell the user what the homework is. Will be updated daily (daily not included).", inline=False)
     embed.add_field(name="!addquote 'quote'", value="This command will take user input as a quote to be added later.", inline=False)
@@ -154,11 +154,7 @@ async def quote(ctx):
 #This command will tell the user what the homework is. Will be updated daily.
 @bot.command(pass_context=True)
 async def homework(ctx):
-    test = discord.Embed(title="Summer Homework", description="Due: First Day of School")
-    test.add_field(name="Summer Letter", value="https://www.chino.k12.ca.us/cms/lib/CA01902308/Centricity/Domain/2558/AB%20Summer%20Letter.pdf")
-    test.add_field(name="Summer Assignment 2018", value="https://www.chino.k12.ca.us/cms/lib/CA01902308/Centricity/Domain/2558/Summer%20Assignment%202018.pdf")
-    test.add_field(name="Calculator Assignment", value="https://www.chino.k12.ca.us/cms/lib/CA01902308/Centricity/Domain/2558/Summer%20Assignment%20AB%20Calculator.pdf")
-    await bot.say(embed=test)
+    await bot.say("Advice for next year")
 
 #This command will take user input as a quote to be added later.
 @bot.command(pass_context=True)
@@ -232,6 +228,23 @@ async def yesorno(ctx, question):
 async def play(ctx, game):
 	await bot.change_presence(game=discord.Game(name=game))
 
+@bot.command(pass_context=True)
+async def update(ctx):
+    await bot.change_presence(game=discord.Game(name="Being updated",url="https://twitch.tv/officialzyronn",type=1))
+
+@bot.event
+async def on_message_delete(message):
+    print("'"+ message.content +"' was deleted")
+
+@bot.command(pass_context=True)
+async def test(ctx, user: discord.Member):
+    await bot.say(user.server.default_channel.name)
+
+#@bot.event
+#async def on_member_join(member):
+#    await bot.send_message(discord.Object(id='456752882243600416'),"Welcome to the "+ member.server.name + " " + member.mention + ". Feel free to request your AP classes with you teacher specified as your role in <#456783703675502594>")
+
+
 #@bot.event
 #async def on_message(msg):
 #    if ' it ' in msg.content:
@@ -244,6 +257,86 @@ async def on_message_edit(before, after):
     print(before.content + " --> "+ after.content)
 
 
+
     
-    
-bot.run("MzczMjkwMjA2NzU5MDkyMjM0.DeeVrg.w0Wl3NkJs49l5wJqJI07iLH7mkc")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bot.run("MzczMjkwMjA2NzU5MDkyMjM0.DgRYhw.cTtzYMOce0Xn_IZVYqy2JRAZhmg")
