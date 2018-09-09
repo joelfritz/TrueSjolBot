@@ -111,7 +111,8 @@ pickuplinelist = [
     "You're the justification to my answer.",
     "You're my asymptote I'll always approach you, and, if you want, we can cross",
     "You're the limit as X approaches sinx/x for me.",
-    "Hey, what's your sine? It must be (pi/2) because you're the 1."
+    "Hey, what's your sine? It must be (pi/2) because you're the 1.",
+	"If I'm sin(x)^2, and your cos(x)^2, we would equal one if we added ourselves together, you're the one for me."
 ]
 
 #A list where the suggestions will go.
